@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --section-padding:20px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-content-container{
+   max-width: 60vw;
+   margin: 0 auto;
+}
+
+header{
+    padding:var(--section-padding);
+}
+
+section{
+    padding:var(--section-padding);
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+.subtitle{
+    margin-bottom: 10px;
+}
+
+.max-count{
+    color: red;
+}
+
+#uuid_generator_form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.input-group label{
+    font-weight: bold;
+}
+
+#generate_btn{
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#generate_btn:hover{
+    cursor: pointer;
+}
+
+#generate_btn:active{
+    transform: scale(0.99);
+    background-color: #45a049;
+}
+
+.result-section{
+    display:none
+}
+
+#uuidDisplayUl{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding:20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+#copy_all_btn{
+    border: none;
+    background-color: #456dee;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#copy_all_btn:hover{
+    cursor: pointer;
+}
+
+#copy_all_btn:active{
+    transform: scale(0.99);
+    background-color: #6f8ff8;
+}
+
+.uuid-item{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.copied{
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    font-size: 16px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
