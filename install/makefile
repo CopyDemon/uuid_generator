@@ -50,6 +50,8 @@ renew_site:
 	@echo "  Site renewed successfully!"
 	@echo "=========================================="
 
+
+
 # Setup SSL certificate with Let's Encrypt
 # Prerequisites: 
 #   1. Domain DNS must point to this server
@@ -69,6 +71,9 @@ setup_ssl:
 	@echo "[3/5] Obtaining SSL certificate..."
 	sudo certbot certonly --standalone -d $(DOMAIN) -d www.$(DOMAIN)
 	@echo "[4/5] Setting up auto-renewal cron job..."
+	sudo yum install -y cronie
+	sudo systemctl enable crond
+	sudo systemctl start crond
 	(sudo crontab -l 2>/dev/null | grep -v certbot; echo "0 3 1 * * certbot renew --pre-hook 'docker stop uuid-app' --post-hook 'docker start uuid-app'") | sudo crontab -
 	@echo "[5/5] Restarting container with SSL..."
 	docker rm uuid-app || true
