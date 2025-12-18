@@ -121,6 +121,22 @@ section{
     justify-content: space-between;
 }
 
+.copy_uuid_btn{
+    padding: 5px 10px;
+    border: none;
+    background-color: #456dee;
+    color: white;
+}
+
+.copy_uuid_btn:hover{
+    cursor: pointer;
+}
+
+.copy_uuid_btn:active{
+    transform: scale(0.99);
+    background-color: #6f8ff8;
+}
+
 .copied{
     background-color: #4CAF50;
     color: white;
