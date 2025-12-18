@@ -3,10 +3,11 @@
     "version": "1.0.0",
     "description": "the backend for this site",
     "main": "index.js",
+    "type": "module",
     "scripts": {
         "start": "node dist/index.js",
         "build": "tsc",
-        "dev": "nodemon --exec ts-node index.ts",
+        "dev": "nodemon --exec ts-node ./src/index.ts",
         "test": "npm run test"
     },
     "keywords": [
@@ -24,6 +25,7 @@
         "typescript": "^5.9.3"
     },
     "dependencies": {
-        "cors": "^2.8.5"
+        "cors": "^2.8.5",
+        "express": "^5.2.1"
     }
 }
