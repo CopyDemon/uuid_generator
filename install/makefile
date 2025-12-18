@@ -1,0 +1,49 @@
+# deploy on aws ec2 aws linux server
+update_yum:
+	echo "update yum"
+	sudo yum update -y
+
+update_apt:
+	echo "update apt"
+	sudo apt update -y
+
+install_and_start_docker:
+	echo "install docker"
+	sudo yum install docker -y
+
+	echo "start docker"
+	sudo systemctl start docker
+	echo "enable docker"
+	sudo systemctl enable docker
+	sudo usermod -aG docker ec2-user
+
+install_git:
+	echo "install git"
+	sudo yum install git -y
+
+clone_repo:
+	echo "clone repo"
+	git clone https://github.com/CopyDemon/uuid_generator.git
+
+build_docker_image:
+	echo "build docker image"
+	cd uuid_generator &&docker build -t uuid-generator -f dockerFile .
+
+run_docker_container:
+	echo "run docker container"
+	docker run -d -p 80:80 --name uuid-app uuid-generator
+
+# Redeploy site with latest code
+renew_site:
+	@echo "=========================================="
+	@echo "  Renewing UUID Generator Site"
+	@echo "  This will stop container, pull latest code, build image and run container"
+	@echo "=========================================="
+	cd ~/uuid_generator && git pull
+	docker stop uuid-app || true
+	docker rm uuid-app || true
+	cd ~/uuid_generator && docker build -t uuid-generator -f dockerFile .
+	docker run -d -p 80:80 --name uuid-app uuid-generator
+	@echo "=========================================="
+	@echo "  Site renewed successfully!"
+	@echo "=========================================="
