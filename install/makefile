@@ -43,7 +43,41 @@ renew_site:
 	docker stop uuid-app || true
 	docker rm uuid-app || true
 	cd ~/uuid_generator && docker build -t uuid-generator -f dockerFile .
-	docker run -d -p 80:80 --name uuid-app uuid-generator
+	docker run -d -p 80:80 -p 443:443 \
+		-v /etc/letsencrypt:/etc/letsencrypt:ro \
+		--name uuid-app uuid-generator
 	@echo "=========================================="
 	@echo "  Site renewed successfully!"
+	@echo "=========================================="
+
+# Setup SSL certificate with Let's Encrypt
+# Prerequisites: 
+#   1. Domain DNS must point to this server
+#   2. Port 443 must be open in Security Group
+DOMAIN = mybittools.com
+
+setup_ssl:
+	@echo "=========================================="
+	@echo "  Setting up SSL Certificate"
+	@echo "  Domain: $(DOMAIN)"
+	@echo "=========================================="
+	@echo "[1/5] Stopping container to free port 80..."
+	docker stop uuid-app || true
+	@echo "[2/5] Installing certbot..."
+	sudo yum update -y
+	sudo yum install -y certbot
+	@echo "[3/5] Obtaining SSL certificate..."
+	sudo certbot certonly --standalone -d $(DOMAIN) -d www.$(DOMAIN)
+	@echo "[4/5] Setting up auto-renewal cron job..."
+	(sudo crontab -l 2>/dev/null | grep -v certbot; echo "0 3 1 * * certbot renew --pre-hook 'docker stop uuid-app' --post-hook 'docker start uuid-app'") | sudo crontab -
+	@echo "[5/5] Restarting container with SSL..."
+	docker rm uuid-app || true
+	cd ~/uuid_generator && docker build -t uuid-generator -f dockerFile .
+	docker run -d -p 80:80 -p 443:443 \
+		-v /etc/letsencrypt:/etc/letsencrypt:ro \
+		--name uuid-app uuid-generator
+	@echo "=========================================="
+	@echo "  SSL Setup Complete!"
+	@echo "  Your site is now available at https://$(DOMAIN)"
+	@echo "  Auto-renewal is configured for the 1st of each month"
 	@echo "=========================================="
