@@ -8,6 +8,10 @@ const uuids = [];
 
 generateBtn.addEventListener("click", (event) => {
     event.preventDefault();
+    // clean previous uuids list
+    uuidDisplayUl.innerHTML = "";
+    uuids.length = 0;
+
     // get how many uuids
     const count = uuidCount.value;
     if (typeof parseInt(count) !== "number" || count > 50 || count < 1) {
