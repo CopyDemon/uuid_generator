@@ -87,7 +87,6 @@ uuidDisplayUl.addEventListener("click", (event) => {
         const li = event.target.closest(".uuid-item");
         const allItems = uuidDisplayUl.querySelectorAll(".uuid-item");
         const index = Array.from(allItems).indexOf(li);
-        console.log(`index ${index} clicked, uuid is ${uuids[index]}`);
         navigator.clipboard.writeText(uuids[index]);
         showCopiedMessage("UUID copied!");
     }
