@@ -4,6 +4,8 @@
     box-sizing: border-box;
 
     --section-padding:20px;
+    --article-page-padding:60px;
+    --footer-height:80px;
 }
 
 
@@ -12,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh + var(--footer-height) + 20px);
 }
 
 footer{
@@ -21,24 +23,43 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    width: 100vw;
+    height: var(--footer-height);
     padding:var(--section-padding);
     background-color: #f1f1f1;
+}
+
+.font-weight-bold{
+    font-weight: bold;
 }
 
 .font-weight-medium{
     font-weight: 500;
 }
 
-.font-weight-small{
+.font-weight-regular{
     font-weight: 400;
+}
+
+.font-weight-small{
+    font-weight: 300;
+}
+
+.font-weight-light{
+    font-weight: 200;
+}
+
+
+.font-size-large{
+    font-size: 20px;
 }
 
 .font-size-medium{
     font-size: 16px;
+}
+
+.font-size-regular{
+    font-size: 12px;
 }
 
 .font-size-small{
@@ -90,7 +111,7 @@ section{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 10px;
+    margin-top: 20px;
 }
 
 .input-group{
@@ -194,4 +215,33 @@ section{
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index:100;
+}
+
+
+/*learning section start*/
+.learning-section{
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+    padding:var(--section-padding);
+}
+.learning-section_article-container{
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+    padding:var(--article-page-padding);
+    border: 1px solid #ccc;
+}
+
+.learning-section_introduction{
+    
+}
+
+.learning-section_list{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 40px;
+    max-width: calc(100% - 40px);
 }
