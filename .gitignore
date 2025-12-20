@@ -1,2 +1,5 @@
 .DS_Store
 node_modules
+
+# Vite build output (built by Docker)
+app/dist/
