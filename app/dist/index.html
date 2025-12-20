@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic Meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- SEO Meta -->
+        <title>UUID Generator Online - Generate UUID v1, v4, v7 | Free Tool</title>
+        <meta name="description" content="Free online UUID generator. Generate random UUIDs in version 1, 4, and 7 formats. Copy single or multiple UUIDs instantly. No signup required." />
+        <meta name="keywords" content="UUID Generator, UUID, GUID, v1, v4, v7, random UUID, online UUID, free UUID generator, bulk UUID" />
+        <meta name="author" content="ShengPang" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph / Social Sharing -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="UUID Generator Online - Generate UUID v1, v4, v7" />
+        <meta property="og:description" content="Free online UUID generator. Generate random UUIDs in version 1, 4, and 7 formats." />
+        <meta property="og:image" content="/assets/android-chrome-512x512-BgRM8jDH.png" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="UUID Generator Online" />
+        <meta name="twitter:description" content="Free online UUID generator. Generate v1, v4, v7 UUIDs instantly." />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/assets/favicon-BLLkGdOc.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32-D01uY5VS.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16-CKKdsVmg.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-CyXv1M5a.png" />
+
+        <!-- PWA -->
+        <link rel="manifest" href="/assets/site-1uNQbbQ6.webmanifest" />
+        <meta name="theme-color" content="#4CAF50" />
+
+        <!-- Styles -->
+      <script type="module" crossorigin src="/assets/index-CvFfCfge.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-4VsEyykl.css">
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2YX83H6D2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-M2YX83H6D2");
+    </script>
+    <body>
+        <div class="main-content-container">
+            <header>
+                <h1 class="title">Free Online UUID Generator (v1, v4, v7)</h1>
+                <p class="description">
+                    Welcome to our free online UUID generator. <br />Generate random UUIDs (v1, v4, or v7) — one or many at a time.
+                    <span class="max-count">(50 at max)</span>
+                </p>
+            </header>
+            <main>
+                <article>
+                    <section>
+                        <h2>Generate new UUIDs</h2>
+                        <p>Fill out the form below to choose how many UUIDs you want to generate and which version to use.</p>
+                        <form id="uuid_generator_form">
+                            <div class="input-group">
+                                <label for="uuid_count">How many UUIDs do you want to generate?</label>
+                                <input type="number" id="uuid_count" min="1" max="50" value="1" />
+                            </div>
+                            <div class="input-group">
+                                <label for="uuid_type">Select UUID Version:</label>
+                                <select id="uuid_type">
+                                    <option value="v1">v1</option>
+                                    <option value="v4" selected>v4</option>
+                                    <option value="v7">v7</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <button id="generate_btn">Click to Generate UUID</button>
+                            </div>
+                        </form>
+                    </section>
+                    <section id="result-section" class="result-section">
+                        <h2>Your Generated UUID Results:</h2>
+                        <p>Feel free to copy and use these freshly generated UUIDs for whatever project you want.</p>
+                        <button id="copy_all_btn">Copy All</button>
+                        <ul id="uuidDisplayUl"></ul>
+                    </section>
+
+                    <!--learning section start here-->
+                    <!--section 1 what is uuid-->
+                    <section class="learning-section_article-container">
+                        <h2>What Is a UUID?</h2>
+                        <p class="learning-section_introduction font-weight-light font-size-large">
+                            A UUID (Universally Unique Identifier) is a 128-bit number used to uniquely identify information in computer systems, often seen as a 32-character hexadecimal string (e.g.,
+                            123e4567-e89b-12d3-a456-426614174000), serving as a reliable, system-agnostic ID for database records, objects, or sessions, with an extremely low chance of duplication,
+                            eliminating the need for a central authority.
+                        </p>
+                        <h3>Key Characteristics of a UUID:</h3>
+                        <ul class="learning-section_list">
+                            <li><strong>128-bit Value:</strong> A UUID represents a 128-bit number, providing a vast range of possible unique values (over 340 undecillion).</li>
+                            <li><strong>Format:</strong> Typically displayed as 32 hexadecimal digits, grouped into five sections separated by hyphens (8-4-4-4-12).</li>
+                            <li>
+                                <strong>Uniqueness:</strong> Designed to be unique across all systems and time, making it ideal for distributed environments where different systems generate IDs
+                                independently.
+                            </li>
+                            <li><strong>No Central Authority:</strong> Can be generated locally by any system, avoiding bottlenecks and coordination issues.</li>
+                            <li><strong>Also Known As:</strong> Often called a GUID (Globally Unique Identifier), especially in Microsoft environments.</li>
+                        </ul>
+                        <h3>Common Uses of UUIDs:</h3>
+                        <ul class="learning-section_list">
+                            <li><strong>Database Keys:</strong> Used as primary keys for database rows, allowing for distributed data management.</li>
+                            <li><strong>Object Identification:</strong> Uniquely tagging digital assets like files, users, or sessions.</li>
+                            <li><strong>Session & Device Tracking:</strong> Managing user sessions or identifying devices in applications without relying on hardware details.</li>
+                        </ul>
+                        <h3>UUID Versions Explained (v1 vs v4 vs v7)</h3>
+                        <p>Our generator supports the most popular versions:</p>
+                        <ul class="learning-section_list">
+                            <li><strong>UUID v4 (Random):</strong> The most common version. It uses random numbers to ensure uniqueness. Perfect for general use.</li>
+                            <li>
+                                <strong>UUID v7 (Time-ordered):</strong> A newer standard that includes a timestamp. It is <strong>sortable</strong>, making it excellent for database primary keys
+                                compared to v4.
+                            </li>
+                            <li><strong>UUID v1 (Timestamp + MAC):</strong> Generates IDs based on the current time and the machine's MAC address.</li>
+                        </ul>
+                        <h3>UUID Example:</h3>
+                        <code>a1b2c3d4-e5f6-7890-1234-567890abcdef</code>
+                    </section>
+                </article>
+                <!--learning section end here-->
+            </main>
+        </div>
+        <footer>
+            <p class="font-weight-medium font-size-medium">Thanks for using our UUID Generator — happy generating!</p>
+            <p class="visitor-count font-weight-small font-size-small">You are the <span id="visitor-count-number">99</span>th visitor to this site.</p>
+            <p class="font-weight-small font-size-small">Copyright © 2025 mybittools.com All rights reserved.</p>
+        </footer>
+        <div id="copied" class="copied">UUID Copied!</div>
+    </body>
+</html>
