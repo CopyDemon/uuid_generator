@@ -1,4 +1,4 @@
-import { v1 as uuidv1, v4 as uuidv4, v7 as uuidv7 } from "https://cdn.jsdelivr.net/npm/uuid@10.0.0/dist/esm-browser/index.js";
+import { v1 as uuidv1, v4 as uuidv4, v7 as uuidv7 } from "uuid";
 
 const uuidType = document.getElementById("uuid_type");
 const uuidCount = document.getElementById("uuid_count");
