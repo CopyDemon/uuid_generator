@@ -1,0 +1,26 @@
+{
+    "name": "uuid_generator_fronend",
+    "version": "1.0.0",
+    "description": "A live uuid generator tool",
+    "main": "index.html",
+    "scripts": {
+        "test": "npm run test",
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "keywords": [
+        "ad",
+        "livetool",
+        "uuid",
+        "free"
+    ],
+    "author": "Sheng",
+    "license": "ISC",
+    "dependencies": {
+        "uuid": "^13.0.0"
+    },
+    "devDependencies": {
+        "vite": "^7.3.0"
+    }
+}
