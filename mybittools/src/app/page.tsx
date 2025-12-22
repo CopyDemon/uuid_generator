@@ -1,7 +1,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import ceilingSaving from "./ceilingSaving";
 
 export default function Home() {
+  // ceilingSaving is a simple ceiling saving calculator
+  ceilingSaving();
   return (
     <div className={styles.page}>
       <main className={styles.main}>
