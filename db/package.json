@@ -1,0 +1,26 @@
+{
+    "name": "mybittool_db",
+    "version": "1.0.0",
+    "description": "database for mybittools",
+    "keywords": [
+        "db",
+        "pg"
+    ],
+    "license": "ISC",
+    "author": "sheng",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "clean_data": "tsx ./cleanData/index.ts",
+        "test": "npm run test"
+    },
+    "dependencies": {
+        "pg": "^8.16.3"
+    },
+    "devDependencies": {
+        "@types/node": "^25.0.3",
+        "@types/pg": "^8.16.0",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.3"
+    }
+}
