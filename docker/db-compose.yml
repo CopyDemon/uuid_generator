@@ -1,0 +1,20 @@
+name: mybittools
+
+services:
+  db:
+    container_name: ${DB_NAME}
+    build: 
+      context: ../db
+      dockerfile: dockerFile
+    environment:
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASS}
+      POSTGRES_DB: ${DB_NAME}
+    env_file:
+      - ../.env
+    ports:
+      - "${PG_PORT}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
