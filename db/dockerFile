@@ -1,0 +1,3 @@
+FROM postgres:18-alpine
+# env like user pass db name are assigned within compose file from .env
+EXPOSE 5432
