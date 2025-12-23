@@ -1,36 +1,38 @@
+include db/Makefile # all db related commands are in db/Makefile
+
 # deploy on aws ec2 aws linux server
 update_yum:
-	echo "update yum"
+	@echo "update yum"
 	sudo yum update -y
 
 update_apt:
-	echo "update apt"
+	@echo "update apt"
 	sudo apt update -y
 
 install_and_start_docker:
-	echo "install docker"
+	@echo "install docker"
 	sudo yum install docker -y
 
-	echo "start docker"
+	@echo "start docker"
 	sudo systemctl start docker
-	echo "enable docker"
+	@echo "enable docker"
 	sudo systemctl enable docker
 	sudo usermod -aG docker ec2-user
 
 install_git:
-	echo "install git"
+	@echo "install git"
 	sudo yum install git -y
 
 clone_repo:
-	echo "clone repo"
+	@echo "clone repo"
 	git clone https://github.com/CopyDemon/uuid_generator.git
 
 build_docker_image:
-	echo "build docker image"
+	@echo "build docker image"
 	cd uuid_generator &&docker build -t uuid-generator -f dockerFile .
 
 run_docker_container:
-	echo "run docker container"
+	@echo "run docker container"
 	docker run -d -p 80:80 --name uuid-app uuid-generator
 
 # Redeploy site with latest code
@@ -49,6 +51,7 @@ renew_site:
 	@echo "=========================================="
 	@echo "  Site renewed successfully!"
 	@echo "=========================================="
+
 
 
 
