@@ -38,7 +38,18 @@ export default function ceilingSaving() {
                 "日定存": 34,
                 "过桥": 8,
                 "彩票 power fantasy": 3,
-                "芬达菠萝": 1.5,
+                "总计": 0,
+                "向上取整总计花费": 0,
+                "向上取整总计应存入": 0
+            }
+        },
+        {
+            date: "2025-12-23",
+            items: {
+                "google one": 1.99,
+                "收到支票 Transunion": +124.75,
+                "日定存": 35,
+                "假装过桥存": 8,
                 "总计": 0,
                 "向上取整总计花费": 0,
                 "向上取整总计应存入": 0
@@ -63,4 +74,22 @@ export default function ceilingSaving() {
         eachDay.items["向上取整总计应存入"] = Math.ceil(eachDay.items["向上取整总计花费"] - eachDay.items["总计"]);
         console.log(`今天是${eachDay.date}, 总计花费${eachDay.items["总计"]}, 向上取整应该存: ${eachDay.items["向上取整总计应存入"]}`);
     });
+
+    fetch("http://localhost:3000/api/expenseTracker", {
+        method: "GET",
+    }).then((res) => {
+        console.log(res);
+    }).then((data) => {
+        console.log(data);
+    })
+
+    // test post to db
+    fetch("http://localhost:3000/api/expenseTracker", {
+        method: "POST",
+        body: JSON.stringify({ spend: spend, post: false }),
+    }).then((res) => {
+        console.log(res);
+    }).then((data) => {
+        console.log(data);
+    })
 }
