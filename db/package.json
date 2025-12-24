@@ -11,7 +11,7 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
-        "clean_data": "tsx ./cleanData/index.ts",
+        "cleanData": "tsx ./cleanData/index.ts",
         "test": "npm run test"
     },
     "dependencies": {
