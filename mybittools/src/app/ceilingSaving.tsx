@@ -55,6 +55,18 @@ export default function ceilingSaving() {
                 "向上取整总计应存入": 0
             }
         },
+        {
+            date: "2025-12-24",
+            items: {
+                "power fantasy": 3,
+                "寿司 橙子": 138,
+                "日定存": 36,
+                "假装过桥存 （8块钱银行decilined）": 20,
+                "总计": 0,
+                "向上取整总计花费": 0,
+                "向上取整总计应存入": 0
+            }
+        },
 
     ]
 
