@@ -60,8 +60,31 @@ export default function ceilingSaving() {
             items: {
                 "power fantasy": 3,
                 "寿司 橙子": 138,
-                "日定存": 36,
                 "假装过桥存 （8块钱银行decilined）": 20,
+                "日定存": 36,
+                "总计": 0,
+                "向上取整总计花费": 0,
+                "向上取整总计应存入": 0
+            }
+        },
+        {
+            date: "2025-12-25",
+            items: {
+                "泰诺 小熊 红牛": 28.92,
+                "假装过桥存": 8,
+                "日定存": 37,
+                "总计": 0,
+                "向上取整总计花费": 0,
+                "向上取整总计应存入": 0
+            }
+        },
+        {
+            date: "2025-12-26",
+            items: {
+                "充电": 13.85,
+                "兰州牛肉面": 85.77,
+                "* 问自己借": 500,
+                "日定存": 38,
                 "总计": 0,
                 "向上取整总计花费": 0,
                 "向上取整总计应存入": 0
@@ -85,6 +108,7 @@ export default function ceilingSaving() {
         eachDay.items["向上取整总计花费"] = currentCeilingTotalCost;
         eachDay.items["向上取整总计应存入"] = Math.ceil(eachDay.items["向上取整总计花费"] - eachDay.items["总计"]);
         console.log(`今天是${eachDay.date}, 总计花费${eachDay.items["总计"]}, 向上取整应该存: ${eachDay.items["向上取整总计应存入"]}`);
+        return eachDay;
     });
 
     fetch("http://localhost:3000/api/expenseTracker", {
@@ -98,7 +122,7 @@ export default function ceilingSaving() {
     // test post to db
     fetch("http://localhost:3000/api/expenseTracker", {
         method: "POST",
-        body: JSON.stringify({ spend: spend, post: false }),
+        body: JSON.stringify({ spend: spend, post: true }),
     }).then((res) => {
         console.log(res);
     }).then((data) => {
