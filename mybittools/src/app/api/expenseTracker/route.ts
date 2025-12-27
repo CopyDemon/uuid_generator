@@ -20,7 +20,7 @@ const client = new Client({
 client.connect();
 
 
-export async function GET(request: Request, response: Response) {
+export async function GET(request: Request) {
     try {
         // validate user
         const isUserValid = validateUser(request.headers.get("user") || "");
@@ -40,7 +40,7 @@ export async function GET(request: Request, response: Response) {
 }
 
 // TODO: add Transaction?
-export async function POST(request: Request, response: Response) {
+export async function POST(request: Request) {
     try {
         console.log("Post data: update expense db")
         // validate user
