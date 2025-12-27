@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import ceilingSaving from "@/app/ceilingSaving";
 
 // API 返回的数据结构
 interface ExpenseRow {
@@ -58,6 +59,7 @@ export default function ExpensePage() {
     return (
         <div>
             <h1>Expense Tracker</h1>
+            <button onClick={ceilingSaving}>Update saving</button>
             <div>{spendingDisplay}</div>
         </div>
     );

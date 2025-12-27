@@ -30,7 +30,7 @@ export async function GET(request: Request, response: Response) {
 
         const query = "SELECT * FROM expense.daily_expense";
         const result = await client.query(query);
-        console.log(result.rows);
+        // console.log(result.rows);
 
         return new Response(JSON.stringify(result.rows));
     } catch (e: unknown) {
@@ -42,6 +42,7 @@ export async function GET(request: Request, response: Response) {
 // TODO: add Transaction?
 export async function POST(request: Request, response: Response) {
     try {
+        console.log("Post data: update expense db")
         // validate user
         const isUserValid = validateUser(request.headers.get("user") || "");
         if (!isUserValid) {
