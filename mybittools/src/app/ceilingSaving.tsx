@@ -90,7 +90,6 @@ export default function ceilingSaving() {
                 "向上取整总计应存入": 0
             }
         },
-
     ]
 
     const keyWontCount: Array<string> = ["date", "总计", "向上取整总计花费", "向上取整总计应存入"];
@@ -114,9 +113,9 @@ export default function ceilingSaving() {
     fetch("http://localhost:3000/api/expenseTracker", {
         method: "GET",
     }).then((res) => {
-        console.log(res);
+        // console.log(res);
     }).then((data) => {
-        console.log(data);
+        // console.log(data);
     })
 
     // test post to db
@@ -124,8 +123,8 @@ export default function ceilingSaving() {
         method: "POST",
         body: JSON.stringify({ spend: spend, post: true }),
     }).then((res) => {
-        console.log(res);
+        // console.log(res);
     }).then((data) => {
-        console.log(data);
+        // console.log(data);
     })
 }
