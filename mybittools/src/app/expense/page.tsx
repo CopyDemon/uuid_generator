@@ -1,3 +1,8 @@
+/**
+ * This page is the main page of expense tracker(how much I spend)
+ * It use to display the expense data to screen
+ * 
+ */
 "use client";
 import { useState, useEffect } from "react";
 import ceilingSaving from "@/app/ceilingSaving";
@@ -50,6 +55,7 @@ export default function ExpensePage() {
         )
     });
 
+    // fetch the data from backend
     useEffect(() => {
         fetch("http://localhost:3000/api/expenseTracker")
             .then((res) => res.json())
