@@ -13,29 +13,51 @@
 import myExpense from "@/app/expense/tempData/myExpense.json";
 interface DailySpend {
     date: string;
-    items: {
-        [key: string]: number | undefined;
-    }
+    items: Array<
+        {
+            category: string;
+            name: string;
+            price: number;
+        }
+    >
 }
 
 export default async function ceilingSaving() {
     const spend: Array<DailySpend> = myExpense;
 
     const keyWontCount: Array<string> = ["date", "总计", "向上取整总计花费", "向上取整总计应存入"];
+
     spend.forEach((eachDay) => {
         let currentCeilingTotalCost: number = 0;
         let currentTotalCost: number = 0;
-        Object.keys(eachDay.items).forEach((key) => {
-            if (!keyWontCount.includes(key) && typeof (eachDay.items[key]) == "number") {
-                const ceilingCost = Math.ceil(eachDay.items[key]);
-                currentCeilingTotalCost += ceilingCost;
-                currentTotalCost += eachDay.items[key];
+
+        // calculate ceiling cost and total cost of one day
+        eachDay.items.forEach((eachSpend) => {
+            const ceilingCost = Math.ceil(eachSpend.price);
+            currentCeilingTotalCost += ceilingCost;
+            currentTotalCost += eachSpend.price;
+        })
+
+        // update ceiling cost and total cost of one day
+        let totalSpendNumber: number | undefined = undefined;
+        let ceilingTotalNumber: number | undefined = undefined;
+        let ceilingSavingNumber: number | undefined = undefined;
+        eachDay.items.forEach((eachSpend) => {
+            if (eachSpend.category == "total") {
+                eachSpend.price = currentTotalCost;
+                totalSpendNumber = currentTotalCost;
+            }
+            if (eachSpend.category == "ceiling_total") {
+                eachSpend.price = currentCeilingTotalCost;
+                ceilingTotalNumber = currentCeilingTotalCost;
+            }
+            if (eachSpend.category == "ceiling_saving") {
+                eachSpend.price = Math.ceil(currentCeilingTotalCost - currentTotalCost);
+                ceilingSavingNumber = Math.ceil(currentCeilingTotalCost - currentTotalCost);
             }
         })
-        eachDay.items["总计"] = currentTotalCost;
-        eachDay.items["向上取整总计花费"] = currentCeilingTotalCost;
-        eachDay.items["向上取整总计应存入"] = Math.ceil(eachDay.items["向上取整总计花费"] - eachDay.items["总计"]);
-        console.log(`今天是${eachDay.date}, 总计花费${eachDay.items["总计"]}, 向上取整应该存: ${eachDay.items["向上取整总计应存入"]}`);
+
+        console.log(`今天是${eachDay.date}, 总计花费${totalSpendNumber}, 向上取整应该存: ${ceilingSavingNumber}`);
         return eachDay;
     });
 
