@@ -10,21 +10,16 @@
  * should saving: it will calculate the should saving by substracting the total cost from the ceiling cost
  * 
  */
+import myExpense from "@/app/expense/tempData/myExpense.json";
 interface DailySpend {
     date: string;
     items: {
-        [key: string]: number;
+        [key: string]: number | undefined;
     }
 }
 
 export default async function ceilingSaving() {
-    // read from temp data (my expense)
-    const spend: Array<DailySpend> = JSON.parse(
-        await fetch("http://localhost:3000/api/expenseTracker")
-            .then((res) => res.json())
-    )
-
-    console.log(spend)
+    const spend: Array<DailySpend> = myExpense;
 
     const keyWontCount: Array<string> = ["date", "总计", "向上取整总计花费", "向上取整总计应存入"];
     spend.forEach((eachDay) => {
