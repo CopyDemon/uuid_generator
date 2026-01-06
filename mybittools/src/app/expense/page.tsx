@@ -5,7 +5,7 @@
  */
 "use client";
 import { useState, useEffect } from "react";
-import ceilingSaving from "@/app/ceilingSaving";
+import ceilingSaving from "@/app/expense/utility/ceilingSaving";
 
 // API 返回的数据结构
 interface ExpenseRow {
