@@ -10,7 +10,6 @@
  * should saving: it will calculate the should saving by substracting the total cost from the ceiling cost
  * 
  */
-import fs from "fs";
 interface DailySpend {
     date: string;
     items: {
@@ -18,11 +17,12 @@ interface DailySpend {
     }
 }
 
-export default function ceilingSaving() {
+export default async function ceilingSaving() {
     // read from temp data (my expense)
-    const spend: Array<DailySpend> = JSON.parse(fs.readFileSync(
-        "../../expense/tempData/myExpense.json", "utf-8"
-    ))
+    const spend: Array<DailySpend> = JSON.parse(
+        await fetch("http://localhost:3000/api/expenseTracker")
+            .then((res) => res.json())
+    )
 
     console.log(spend)
 
