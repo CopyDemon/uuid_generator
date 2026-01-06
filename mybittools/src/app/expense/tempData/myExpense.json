@@ -1,73 +1,717 @@
 [
     {
         "date": "2025-12-21",
-        "items": {
-            "胃药 cvs": 20.94,
-            "可乐，小饼干 shell 加油站": 6.02,
-            "水煮鱼 san mateo": 49.78,
-            "充电": 18.93,
-            "总计": 0,
-            "向上取整总计花费": 0,
-            "向上取整总计应存入": 0
-        }
+        "items": [
+            {
+                "category": "medicine",
+                "name": "胃药 cvs",
+                "price": 20.94
+            },
+            {
+                "category": "shopping",
+                "name": "可乐，小饼干 shell 加油站",
+                "price": 6.02
+            },
+            {
+                "category": "food",
+                "name": "水煮鱼 san mateo",
+                "price": 49.78
+            },
+            {
+                "category": "transportation",
+                "name": "充电",
+                "price": 18.93
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
     },
     {
         "date": "2025-12-22",
-        "items": {
-            "fastrack": 120,
-            "日定存": 34,
-            "过桥": 8,
-            "彩票 power fantasy": 3,
-            "总计": 0,
-            "向上取整总计花费": 0,
-            "向上取整总计应存入": 0
-        }
+        "items": [
+            {
+                "category": "transportation",
+                "name": "fastrack",
+                "price": 120
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 34
+            },
+            {
+                "category": "saving",
+                "name": "过桥存",
+                "price": 8
+            },
+            {
+                "category": "lottery",
+                "name": "彩票 power fantasy",
+                "price": 3
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
     },
     {
         "date": "2025-12-23",
-        "items": {
-            "google one": 1.99,
-            "收到支票 Transunion": 124.75,
-            "日定存": 35,
-            "假装过桥存": 8,
-            "总计": 0,
-            "向上取整总计花费": 0,
-            "向上取整总计应存入": 0
-        }
+        "items": [
+            {
+                "category": "subscription",
+                "name": "google one",
+                "price": 1.99
+            },
+            {
+                "category": "saving",
+                "name": "收到支票 Transunion",
+                "price": 124.75
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 35
+            },
+            {
+                "category": "saving",
+                "name": "过桥存",
+                "price": 8
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
     },
     {
         "date": "2025-12-24",
-        "items": {
-            "power fantasy": 3,
-            "寿司 橙子": 138,
-            "假装过桥存 （8块钱银行decilined）": 20,
-            "日定存": 36,
-            "总计": 0,
-            "向上取整总计花费": 0,
-            "向上取整总计应存入": 0
-        }
+        "items": [
+            {
+                "category": "lottery",
+                "name": "power fantasy",
+                "price": 3
+            },
+            {
+                "category": "food",
+                "name": "寿司 橙子",
+                "price": 138
+            },
+            {
+                "category": "saving",
+                "name": "假装过桥存 （8块钱银行decilined）",
+                "price": 20
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 36
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
     },
     {
         "date": "2025-12-25",
-        "items": {
-            "泰诺 小熊 红牛": 28.92,
-            "假装过桥存": 8,
-            "日定存": 37,
-            "总计": 0,
-            "向上取整总计花费": 0,
-            "向上取整总计应存入": 0
-        }
+        "items": [
+            {
+                "category": "medicine",
+                "name": "泰诺 小熊 红牛",
+                "price": 28.92
+            },
+            {
+                "category": "saving",
+                "name": "假装过桥存",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 37
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
     },
     {
         "date": "2025-12-26",
-        "items": {
-            "充电": 13.85,
-            "兰州牛肉面": 85.77,
-            "* 问自己借": 500,
-            "日定存": 38,
-            "总计": 0,
-            "向上取整总计花费": 0,
-            "向上取整总计应存入": 0
-        }
+        "items": [
+            {
+                "category": "transportation",
+                "name": "充电",
+                "price": 13.85
+            },
+            {
+                "category": "food",
+                "name": "兰州牛肉面",
+                "price": 85.77
+            },
+            {
+                "category": "saving",
+                "name": "* 问自己借",
+                "price": 500
+            },
+            {
+                "category": "saving",
+                "name": "过桥存",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 38
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
+    },
+    {
+        "date": "2025-12-27",
+        "items": [
+            {
+                "category": "house",
+                "name": "借自己850因为三十一号出门提前交房租",
+                "price": 850
+            },
+            {
+                "category": "food",
+                "name": "八宝粥 豆沙包 章鱼小丸子",
+                "price": 25.87
+            },
+            {
+                "category": "transportation",
+                "name": "存 假装过桥",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 39
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
+    },
+    {
+        "date": "2025-12-28",
+        "items": [
+            {
+                "category": "lottery",
+                "name": "super fantasy",
+                "price": 3
+            },
+            {
+                "category": "food",
+                "name": "牛",
+                "price": 9.58
+            },
+            {
+                "category": "transportation",
+                "name": "教会停车",
+                "price": 4
+            },
+            {
+                "category": "transportation",
+                "name": "过桥",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "过桥存",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 40
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
+    },
+    {
+        "date": "2025-12-29",
+        "items": [
+            {
+                "category": "shopping",
+                "name": "租雪具包",
+                "price": 45
+            },
+            {
+                "category": "lottery",
+                "name": "Fantasy x2, Super, 刮刮乐 1+5+5+10",
+                "price": 3
+            },
+            {
+                "category": "house",
+                "name": "房租",
+                "price": 800
+            },
+            {
+                "category": "car",
+                "name": "玻璃水",
+                "price": 6.6
+            },
+            {
+                "category": "shopping",
+                "name": "洗面奶 科颜氏乳液 咖啡因胶囊",
+                "price": 89
+            },
+            {
+                "category": "shopping",
+                "name": "旅行洗漱包",
+                "price": 16.85
+            },
+            {
+                "category": "saving",
+                "name": "过桥存",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 41
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
+    },
+    {
+        "date": "2025-12-30",
+        "items": [
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整 昨天，前天",
+                "price": 3
+            },
+            {
+                "category": "saving",
+                "name": "假装过桥存",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 42
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
+    },
+    {
+        "date": "2025-12-31",
+        "items": [
+            {
+                "category": "travel",
+                "name": "滑雪包托运",
+                "price": 35
+            },
+            {
+                "category": "saving",
+                "name": "假装过桥存",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 43
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
+    },
+    {
+        "date": "2026-01-01",
+        "items": [
+            {
+                "category": "communication",
+                "name": "电话费",
+                "price": 83.4
+            },
+            {
+                "category": "shopping",
+                "name": "在park city滑雪场买的矿泉水，蛋糕",
+                "price": 28.5
+            },
+            {
+                "category": "credit_card",
+                "name": "苹果信用卡",
+                "price": 1500
+            },
+            {
+                "category": "investment",
+                "name": "Robinhood 入金",
+                "price": 1000
+            },
+            {
+                "category": "saving",
+                "name": "还钱给自己上个月借自己五百周转",
+                "price": 500
+            },
+            {
+                "category": "saving",
+                "name": "还钱给自己上个月自己垫付给自己提前交房租",
+                "price": 850
+            },
+            {
+                "category": "saving",
+                "name": "假装过桥存",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 13
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
+    },
+    {
+        "date": "2026-01-02",
+        "items": [
+            {
+                "category": "shopping",
+                "name": "假装买烟",
+                "price": 25
+            },
+            {
+                "category": "saving",
+                "name": "假装过桥存",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 14
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
+    },
+    {
+        "date": "2026-01-03",
+        "items": [
+            {
+                "category": "shopping",
+                "name": "租雪服",
+                "price": 115.03
+            },
+            {
+                "category": "saving",
+                "name": "假装过桥存",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 15
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
+    },
+    {
+        "date": "2026-01-04",
+        "items": [
+            {
+                "category": "saving",
+                "name": "向上取整",
+                "price": 3
+            },
+            {
+                "category": "saving",
+                "name": "昨天向上取整存入",
+                "price": 2
+            },
+            {
+                "category": "shopping",
+                "name": "亚马逊书 the circle of days",
+                "price": 12.99
+            },
+            {
+                "category": "transportation",
+                "name": "充电",
+                "price": 16.54
+            },
+            {
+                "category": "travel",
+                "name": "滑雪包托运",
+                "price": 35
+            },
+            {
+                "category": "saving",
+                "name": "假装过桥存",
+                "price": 8
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 16
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
+    },
+    {
+        "date": "2026-01-05",
+        "items": [
+            {
+                "category": "saving",
+                "name": "向上取整",
+                "price": 2
+            },
+            {
+                "category": "transportation",
+                "name": "停车",
+                "price": 0.49
+            },
+            {
+                "category": "saving",
+                "name": "过桥存",
+                "price": 8.5
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 17
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
+    },
+    {
+        "date": "2026-01-06",
+        "items": [
+            {
+                "category": "saving",
+                "name": "过桥存",
+                "price": 8.5
+            },
+            {
+                "category": "saving",
+                "name": "日定存",
+                "price": 18
+            },
+            {
+                "category": "total",
+                "name": "总计",
+                "price": 0
+            },
+            {
+                "category": "ceiling_total",
+                "name": "向上取整总计花费",
+                "price": 0
+            },
+            {
+                "category": "ceiling_saving",
+                "name": "向上取整总计应存入",
+                "price": 0
+            }
+        ]
     }
 ]
