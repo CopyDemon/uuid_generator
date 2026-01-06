@@ -1,4 +1,3 @@
-console.log("hello world");
 import { Client } from "pg";
 import * as path from "path";
 import * as dotenv from "dotenv";
@@ -18,7 +17,6 @@ const client = new Client({
 });
 
 client.connect();
-
 
 export async function GET(request: Request) {
     try {
