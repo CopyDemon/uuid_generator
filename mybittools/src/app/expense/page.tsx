@@ -22,6 +22,7 @@ interface GroupedExpenses {
 
 export default function ExpensePage() {
     const [spendData, setSpendData] = useState<ExpenseRow[]>([]);
+    console.log(spendData)
 
     // 按日期分组
     const groupedByDate: GroupedExpenses = spendData.reduce((acc, row) => {
@@ -36,6 +37,7 @@ export default function ExpensePage() {
 
     // 渲染分组后的数据
     const spendingDisplay = Object.entries(groupedByDate).map(([date, items]) => {
+        console.log(date, items)
         let totalSpending = 0
         return (
             <div key={date} style={{ marginBottom: '20px' }}>
@@ -49,7 +51,7 @@ export default function ExpensePage() {
                             </li>
                         })
                     }
-                    <li>总计: ${totalSpending}</li>
+                    <li>总计: ${totalSpending.toFixed(2)}</li>
                 </ul>
             </div>
         )
@@ -67,6 +69,7 @@ export default function ExpensePage() {
             <h1>Expense Tracker</h1>
             <button onClick={ceilingSaving}>Update saving</button>
             <div>{spendingDisplay}</div>
+            <div>testing</div>
         </div>
     );
 }
