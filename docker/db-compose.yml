@@ -1,15 +1,31 @@
 name: mybittools
 
 services:
-  db:
+  honeypot-db:
+    container_name: ${HONEYPOT_DB_NAME}
+    build: 
+      context: ../db/honeypot_db
+      dockerfile: dockerFile
+    environment:
+      POSTGRES_DB: ${HONEYPOT_DB_NAME}
+      POSTGRES_USER: ${HONEYPOT_DB_USER}
+      POSTGRES_PASSWORD: ${HONEYPOT_DB_PASS}
+    env_file:
+      - ../.env
+    ports:
+      - "${HONEYPOT_DB_PORT}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  main_db:
     container_name: ${DB_NAME}
     build: 
       context: ../db
       dockerfile: dockerFile
     environment:
+      POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${PG_USER}
       POSTGRES_PASSWORD: ${PG_PASS}
-      POSTGRES_DB: ${DB_NAME}
     env_file:
       - ../.env
     ports:
