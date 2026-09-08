@@ -46,7 +46,7 @@ echo "[6/6] Starting container..."
 sudo docker stop uuid-app 2>/dev/null || true
 sudo docker rm uuid-app 2>/dev/null || true
 # Start new container
-sudo docker run -d -p 80:80 --name uuid-app uuid-generator
+sudo docker run -d -p 80:80 -p 443:443 --name uuid-app uuid-generator
 
 echo "=========================================="
 echo "  Deployment Complete!"
