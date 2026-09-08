@@ -45,8 +45,8 @@ echo "[6/6] Starting container..."
 # Stop and remove existing container if exists
 sudo docker stop uuid-app 2>/dev/null || true
 sudo docker rm uuid-app 2>/dev/null || true
-# Start new container
-sudo docker run -d -p 80:80 -p 443:443 --name uuid-app uuid-generator
+# Start new container & point to correct SSL certificate directory
+sudo docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt:ro --restart unless-stopped --name uuid-app uuid-generator
 
 echo "=========================================="
 echo "  Deployment Complete!"
